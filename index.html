@@ -227,7 +227,11 @@
                 var name = document.getElementById('name');
                 var email = document.getElementById('email');
                 var subject = document.getElementById('subject');
-                window.open('mailto:cusmedroidteam@gmail.com?cc=cusmedroid@gmail.com, iyortml@gmail.com, &bcc=cusmedroidteam@gmail.com&subject='+name.value+'&body='+subject.value);
+                if (name.value < 1 || email.value < 1 || subject.value < 1) {
+                    alert('Please fill out this field!');
+                } else {
+                    window.open('mailto:cusmedroidteam@gmail.com?cc=cusmedroid@gmail.com, iyortml@gmail.com, &bcc=cusmedroidteam@gmail.com&subject='+name.value+'&body='+subject.value);
+                }
             }
 
             if ('mediaSession' in navigator) {
