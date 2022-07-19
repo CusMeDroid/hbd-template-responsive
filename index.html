@@ -158,10 +158,10 @@
         <div class="main" id="contact">
             <h1 id="sugesto" class="titlehome Audiowide animate-left"><i class="fa fa-inbox" aria-hidden="true"></i> Contact</h1>
             <div class="row">
-                <div class="column2 lko">
+                <div class="column2">
                     <input class="my-input-text" type="text" name="name" id="name" placeholder="Your Name">
                 </div>
-                <div class="column2 lko">
+                <div class="column2">
                     <input class="my-input-text" type="email" name="email" id="email" placeholder="Your Email">
                 </div>
             </div>
@@ -169,35 +169,34 @@
                 <textarea class="my-input-text" name="subject" placeholder="Write something..." id="subject" rows="5"></textarea>
             </div>
             <div class="lko">
-                <input class="my-input-submit Audiowide" type="submit" name="submit" onclick="submitFunc()" value="Send">
+                <input class="my-input-submit Audiowide hbd-tmp-bg-btn" type="submit" name="submit" onclick="submitFunc()" value="Send">
             </div>
         </div>
 
-        <footer>
+        <footer class="hbd-tmp-bg">
             <h1 class="patobo Audiowide animate-left">Happy Birthday</h1>
             <p class="Trirong animate-right">© 2022 Powered by <a class="white" alt="CusMeDroid" title="CusMeDroid" href="https://cusmedroid.github.io"><b>CusMeDroid</b></a></p>
             <div class="sp-footers"></div>
         </footer>
 
-        <audio style='display:none;' id='myAudio' controls loop>
+        <audio class="denone" id="myAudio" controls loop>
             <source src="music/ellegarden_make_a_wish.mp3" type="audio/mpeg">
         </audio>
 
         <div class="deksmus">
-            <a onclick='playAudio()' title="Play" id='musicpl'>
+            <a onclick="playAudio()" title="Play" id="musicpl">
                 <i class="fa fa-play mus" aria-hidden="true"></i>
             </a>
-            <a onClick='pauseAudio()' title="Pause" id='musicpa'>
+            <a onClick="pauseAudio()" title="Pause" id="musicpa">
                 <i class="fa fa-pause mus" aria-hidden="true"></i>
             </a>
         </div>
 
-        <a class="fixed-whatsapp" href="https://wa.me/<?php echo $usrdata['phone']?>" rel="nofollow noopener" target="_blank" title="Whatsapp">
         <div class="header animate-bottom">
             <div class="" align="center">
                 <div class="column-header"><a href="#" title="Home" class="bbtn"><i class="fa fa-home" aria-hidden="true"></i></a></div>
                 <div class="column-header"><a href="#gallery" title="Gallery" class="bbtn"><i class="fa fa-picture-o" aria-hidden="true"></i></a></div>
-                <div class="column-header"><a href="#wish" title="Wish" class="bbtn"><i class="fa fa-heart" aria-hidden="true"></i></div></a>
+                <div class="column-header"><a href="#wish" title="Wish" class="bbtn"><i class="fa fa-heart" aria-hidden="true"></i></a></div>
                 <div class="column-header" onclick='playAudio()' id='musicp2'><a title="Play" class="bbtn"><i class="fa fa-play" aria-hidden="true"></i></a></div>
                 <div class="column-header" onClick='pauseAudio()' id='musicpa2'><a title="Pause" class="bbtn"><i class="fa fa-pause" aria-hidden="true"></i></a></div>
             </div>
