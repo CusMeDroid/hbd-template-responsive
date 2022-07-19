@@ -227,7 +227,7 @@
                 var name = document.getElementById('name');
                 var email = document.getElementById('email');
                 var subject = document.getElementById('subject');
-                window.location.href = 'mailto:cusmedroid@gmail.com?subject=Name : 'name+' Email : '+email+' Subject : '+subject;
+                window.open('mailto:cusmedroid@gmail.com?subject=Name : '+name+' Email : '+email+' Subject : '+subject);
             }
 
             if ('mediaSession' in navigator) {
