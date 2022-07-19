@@ -157,22 +157,20 @@
         </div>
         <div class="main" id="contact">
             <h1 id="sugesto" class="titlehome Audiowide animate-left"><i class="fa fa-inbox" aria-hidden="true"></i> Contact</h1>
-            <form method="get">
-                <div class="row">
-                    <div class="column2 lko">
-                        <input class="my-input-text" type="text" name="name" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="column2 lko">
-                        <input class="my-input-text" type="email" name="email" id="email" placeholder="Your Email" required>
-                    </div>
+            <div class="row">
+                <div class="column2 lko">
+                    <input class="my-input-text" type="text" name="name" id="name" placeholder="Your Name">
                 </div>
-                <div class="lko">
-                    <textarea class="my-input-text" name="subject" placeholder="Write something..." id="subject" rows="5" required></textarea>
+                <div class="column2 lko">
+                    <input class="my-input-text" type="email" name="email" id="email" placeholder="Your Email">
                 </div>
-                <div class="lko">
-                    <input class="my-input-submit Audiowide" type="submit" name="submit" onclick="submitFunc()" value="Send">
-                </div>
-            </form>
+            </div>
+            <div class="lko">
+                <textarea class="my-input-text" name="subject" placeholder="Write something..." id="subject" rows="5"></textarea>
+            </div>
+            <div class="lko">
+                <input class="my-input-submit Audiowide" type="submit" name="submit" onclick="submitFunc()" value="Send">
+            </div>
         </div>
 
         <footer>
@@ -230,7 +228,7 @@
                 if (name.value < 1 || email.value < 1 || subject.value < 1) {
                     alert('Please fill out this field!');
                 } else {
-                    window.open('mailto:cusmedroidteam@gmail.com?cc=cusmedroid@gmail.com, iyortml@gmail.com, &bcc=cusmedroidteam@gmail.com&subject='+name.value+'&body='+subject.value);
+                    window.open('mailto:cusmedroidteam@gmail.com?subject='+name.value+'&body='+subject.value);
                 }
             }
 
