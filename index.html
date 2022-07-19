@@ -8,7 +8,7 @@
         <meta name="description" content="Happy birthday template from CusMeDroid">
         <meta name="keywords" content="cusmedroid, iyortml, learn php with cusmedroid, learn php with iyortml, cusmedroid android, cusmedroid developer, developer indonesia, made in indonesia, website, php, html, css, js, xml, java, api, apikey, mysqli, phpmyadmin, android studio, android-studio, Happy birthday template, hbd template"/>
         <meta name="author" content="CusMeDroid">
-        <link rel="stylesheet" type="text/css" href="https://cusmedroid.github.io/css/hbd_template.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
         <link rel="stylesheet" href="https://cusmedroid.github.io/fontawesome-4/css/font-awesome.min.css">
         <script type="text/javascript" src="https://cusmedroid.github.io/js/jquery-3.6.0.min.js"></script>
@@ -157,20 +157,20 @@
         </div>
         <div class="main" id="contact">
             <h1 id="sugesto" class="titlehome Audiowide animate-left"><i class="fa fa-inbox" aria-hidden="true"></i> Contact</h1>
-            <form method="get" action="mailto:cusmedroid@gmail.com?subject=Happy Birthday Template!">
+            <form method="get">
                 <div class="row">
                     <div class="column2 lko">
-                        <input class="my-input-text" type="text" name="name" placeholder="Your Name" required>
+                        <input class="my-input-text" type="text" name="name" id="name" placeholder="Your Name" required>
                     </div>
                     <div class="column2 lko">
-                        <input class="my-input-text" type="email" name="email" placeholder="Your Email" required>
+                        <input class="my-input-text" type="email" name="email" id="email" placeholder="Your Email" required>
                     </div>
                 </div>
                 <div class="lko">
-                    <textarea class="my-input-text" name="subject" placeholder="Write something..." rows="5" required></textarea>
+                    <textarea class="my-input-text" name="subject" placeholder="Write something..." id="subject" rows="5" required></textarea>
                 </div>
                 <div class="lko">
-                    <input class="my-input-submit Audiowide" type="submit" name="submit" value="Send">
+                    <input class="my-input-submit Audiowide" type="submit" name="submit" onclick="submitFunc()" value="Send">
                 </div>
             </form>
         </div>
@@ -223,6 +223,13 @@
         
         <script type="text/javascript" src="https://cusmedroid.github.io/js/disclaimer.js"></script>
         <script>
+            function submitFunc() {
+                var name = document.getElementById('name');
+                var email = document.getElementById('email');
+                var subject = document.getElementById('subject');
+                window.location.href = 'mailto:cusmedroid@gmail.com?subject=Name : 'name+' Email : '+email+' Subject : '+subject;
+            }
+
             if ('mediaSession' in navigator) {
                 navigator.mediaSession.metadata = new MediaMetadata({
                     title: 'Ellegarden - Make A Wish',
@@ -234,14 +241,14 @@
                 })
             }
             
-            var x = document.getElementById('myAudio'); 
+            var meaudio = document.getElementById('myAudio'); 
             var mp1 = document.getElementById('musicpl'); 
             var mp2 = document.getElementById('musicpa'); 
             var mp1a = document.getElementById('musicp2'); 
             var mp2a = document.getElementById('musicpa2'); 
             
             function fakeplayAudio() { 
-              x.play(); 
+              meaudio.play(); 
               mp1.style.display = 'none';
               mp2.style.display = 'block';
               mp1a.style.display = 'none';
@@ -249,7 +256,7 @@
             }
             
             function playAudio() { 
-              x.play(); 
+              meaudio.play(); 
               mp1.style.display = 'none';
               mp2.style.display = 'block';
               mp1a.style.display = 'none';
@@ -257,7 +264,7 @@
             } 
             
             function pauseAudio() { 
-              x.pause(); 
+              meaudio.pause(); 
               mp1.style.display = 'block';
               mp2.style.display = 'none';
               mp1a.style.display = 'block';
